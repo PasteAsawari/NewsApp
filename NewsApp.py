@@ -1,4 +1,5 @@
 import requests
+from creds import apiKey
 #taking inputs from user
 print(("Would like to read some news? press(y/n)"))
 user_choice=input()
@@ -7,7 +8,7 @@ user_choice=input()
 while (user_choice=="y"):
     print("What types of news you'd like to stay updated on?" )
     query=input()
-    url = f"https://newsapi.org/v2/everything?q={query}&from=2023-11-28&to=2023-11-28&sortBy=popularity&apiKey=61c121edc4ab45d5876d72a898e4baf4"
+    url = f"https://newsapi.org/v2/everything?q={query}&from=2023-11-28&to=2023-11-28&sortBy=popularity&apiKey={apiKey}"
     response = requests.get(url).json()
     i=1
     for article in response["articles"]:
