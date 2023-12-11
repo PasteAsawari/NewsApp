@@ -1,7 +1,9 @@
 import requests
+#taking inputs from user
 print(("Would like to read some news? press(y/n)"))
 user_choice=input()
 
+#logic to fetch news according to user's choice
 while (user_choice=="y"):
     print("What types of news you'd like to stay updated on?" )
     query=input()
